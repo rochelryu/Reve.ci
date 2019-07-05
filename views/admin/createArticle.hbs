@@ -1,0 +1,200 @@
+<section id="container">
+    <!--header start-->
+    <header class="header fixed-top clearfix">
+        <!--logo start-->
+        <div class="brand">
+            <a href="/" class="logo">
+                REVE
+            </a>
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </div>
+        <!--logo end-->
+        <div class="top-nav clearfix">
+            <!--search & user info start-->
+            <div class="nav pull-right top-menu">
+                <a href="/admin/reve/logout" class="disconect">
+                    Deconnection
+                </a>
+            </div>
+            <!--search & user info end-->
+        </div>
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li>
+                        <a class="active" href="/admin/reve">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Tableau de Bord</span>
+                        </a>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-book"></i>
+                            <span>Gestion Primaire</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/admin/reve/createTheme">Creation de Thème</a></li>
+                            <li><a href="/admin/reve/createODD">Creation de ODD</a></li>
+                            <li><a href="/admin/reve/createArticle">Creation d'Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span>Gestion Secondaire</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/admin/reve/createGalery">Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>Bibliothèque</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#">Aucune Idéé</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#">
+                            <i class="fa fa-envelope"></i>
+                            <span>Mail </span>
+                        </a>
+                    </li>
+                </ul>            </div>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <form action="/admin/reve/createArticle" method="post">
+                            <input type="hidden" name="who" value="createArticle" />
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Titre de l'article</label>
+                                <input type="text" name="titre" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleimage">Image</label>
+                                <select name="image" class="form-control" id="exampleimage">
+                                    <option value="">choisir une image</option>
+                                    {{#each info.Images}}
+                                        <option value="{{id}}">{{nom_image}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                              <div class="form-group">
+                                <label for="exampleggroup">le R</label>
+                                <select name="groupe" class="form-control" id="examplegroup">
+                                    <option value="">Choisir votre R</option>
+                                    {{#each info.Groupes}}
+                                        <option value="{{id}}">{{nom}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                              <div class="form-group">
+                                <label for="exampletheme">Thèmes</label>
+                                <select name="theme" class="form-control" id="exampletheme">
+                                    <option value="0">choisir un théme</option>
+                                    {{#each info.Themes}}
+                                        <option value="{{id}}">{{name}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                              <div class="form-group">
+                                <label for="exampleodd">Odd</label>
+                                <select name="odd" class="form-control" id="exampleodd">
+                                    <option value="0">choisir un odd</option>
+                                    {{#each info.Odd}}
+                                        <option value="{{id}}">{{name}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="content" id="full-featured">
+                                </textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-dark">Enregistrer</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6 col-sm-6" >
+                         <h2>Gallery images</h2>
+                        <div class="container-fluid" style="height: 400px;overflow: scroll;">
+                            <div class="row">
+
+                                    {{#each info.Images}}
+                                    <div class="col-md-4" style="padding: 30px;">
+                                        <img src="/images/{{nom_image}}" class="img-responsive"/>
+                                        <p style="margin-top: -45px;color:white;font-size: 28px;text-align:center;background: black;border:1px solid black;">{{nom_image}}</p>
+                                    </div>
+                                    {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <table id="example" class="display" style="width:100%">
+                            <thead>
+                            <tr>
+                                <th>titre</th>
+                                <th>images</th>
+                                <th>R</th>
+                                <th>Theme</th>
+                                <th>Odd</th>
+                                <th>Nombre De vue</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each info.Article}}
+                                <tr>
+                                    <td>{{titre}}</td>
+                                    <td class="imageen"><img src="/images/{{imgs}}" alt=""></td>
+                                    <td>{{onglet}}</td>
+                                    <td>{{theme}}</td>
+                                    <td>{{odd}}</td>
+                                    <td>0  <i class="fa fa-eye"></i></td>
+                                    <td><div style="margin: 10px auto"><button class="btn btn-outline-amber btn-xs">Modifier</button></div>
+                                        <div style="margin: 10px auto"><button class="btn btn-outline-danger btn-xs">Supprimer</button></div></td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br><br>
+                <h2>Liste des articles</h2>
+            </div>
+
+        </section>
+        <!-- footer -->
+        <div class="footer">
+            <div class="wthree-copyright">
+                <p>© 2019 Reve</p>
+            </div>
+        </div>
+        <!-- / footer -->
+    </section>
+    <!--main content end-->
+</section>
+<script src="/javascripts/fake.tiny.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>

@@ -1,0 +1,738 @@
+<div id="main-wrapper">
+
+    <header>
+        <div class="container">
+            <div class="top_ber">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="top_ber_left">
+                            <script>
+                                var date = new Date();
+                                var anne = date.getFullYear();
+                                var mois = date.getMonth() + 1;
+                                var jr = date.getDate();
+                                var hr = date.getHours();
+                                var min = date.getMinutes();
+                                document.write(jr + "/" + mois + "/" +anne + ".  "+ hr+":"+min );
+                            </script>
+                        </div><!--top_ber_left-->
+                    </div><!--col-md-6-->
+                    <div class="col-md-6">
+                        <div class="top_ber_right">
+                            <div class="top-menu">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#">Connexion</a></li>
+                                    <li><a href="#">Inscription</a></li>
+                                </ul>
+                            </div><!--top-menu-->
+                        </div><!--top_ber_left-->
+                    </div><!--col-md-6-->
+                </div><!--row-->
+            </div><!--top_ber-->
+
+            <div class="header-section">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a  href="index.html"><img class="img-responsive" src="images/logo.png" alt=""></a>
+                        </div><!--logo-->
+                    </div><!--col-md-3-->
+
+                    <div class="col-md-6">
+                        <div class="swiper-container">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        PUB REVE
+                                        <!--<div class="header_ad_banner">
+                                            <a  href="#"><img class="img-responsive" src="/images/Armoiries_de_la_Cte_dIvoire_de_1964.png" alt=""></a>
+                                        </div>-->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        PUB DE REVE AUSSI
+                                    </div>
+                                    <div class="swiper-slide">
+                                        PUB DE REVE
+                                    </div>
+                                    <div class="swiper-slide">ELEMENT 4</div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                    </div><!--col-md-6-->
+
+                    <div class="col-md-3">
+                        <div class="social_icon1">
+                            <a class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
+                            <!--Twitter-->
+                            <a class="icons-sm tw-ic"><i class="fa fa-twitter"></i></a>
+                            <!--Google +-->
+                            <a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>
+                            <!--Linkedin-->
+                            <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+                            <!--Pinterest-->
+                            <a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a>
+                        </div> <!--social_icon1-->
+                    </div><!--col-md-3-->
+                </div> <!--row-->
+            </div><!--header-section-->
+        </div><!-- /.container -->
+
+        <nav class="navbar main-menu navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse sidebar-offcanvas">
+                    <ul class="nav navbar-nav">
+                        <li class="hidden"><a href="#page-top"></a></li>
+                        <li><a class="page-scroll" href="../navbar/">Recherches</a></li>
+                        <li><a class="page-scroll" href="../navbar-static-top/">Rencontres</a></li>
+                        <li><a class="page-scroll" href="./">Réalisations</a></li>
+                        <li><a class="page-scroll" href="../navbar/">Réseaux</a></li>
+                        <li><a class="page-scroll" href="../navbar/">Répertoire</a></li>
+                        <li><a class="page-scroll" href="../navbar-static-top/">Reve TV</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bibliothèque <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Vidéos</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li><a href="#">Articles</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themes <b class="caret"></b></a>
+                            <ul class="dropdown-menu fakeland">
+                                <div class="container">
+                                    <div class="row">
+                                        {{#each info.Themes}}
+                                        <div class="col-md-3">
+                                         <a href="/theme/{{id}}"><img class="ite" src="/images/{{profil}}" alt=""/></a>
+                                        </div>
+                                        {{/each}}
+
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="pull-right">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Search" name="q" type="text">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-fr" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- .navbar -->
+    </header>
+
+    <div class="fixedd">
+        <button type="button" class="simple" id="modalDiscount">ODD</button>
+    </div>
+    <div class="fixeddd">
+        <div class="intH">
+            <h3>17 objectifs pour sauver le monde</h3>
+            <p>Les objectifs de développement durable nous donnent la marche à suivre pour parvenir...</p>
+            <a target="_blank" href="https://www.un.org/sustainabledevelopment/fr/objectifs-de-developpement-durable/" class="btn btn-success btn-xs m-t-1">Lire la suite</a>
+        </div>
+        <div class="intentF">
+            <div class="container-fluid">
+                <div class="row">
+                        {{#each info.Odd}}
+                        <div class="col-xs-6 p-0">
+
+                            <div class="blockSh" style="background: url('/images/{{profil}}') no-repeat">
+                                <div class="abss">
+                                    <p>{{name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section id="feature_news_section" class="feature_news_section section_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 pv">
+                    <!--<div class="swiper-container">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item active feature_news_item">
+                                        <div class="item_wrapper">
+                                            <div class="item_img">
+                                                <img class="img-responsive" src="images/1.jpg" alt="Chania">
+                                            </div> &lt;!&ndash;item_img&ndash;&gt;
+                                            <div class="item_title_date">
+                                                <span>Energie</span>
+                                                <div class="news_item_title">
+                                                    <h2><a href="#">Priorités pour une énergie durable</a></h2>
+                                                </div>
+                                                <div class="item_meta"><a href="#">20 Juin- 2019,</a> par:<a href="#">Reve</a></div>
+                                            </div> &lt;!&ndash;item_title_date&ndash;&gt;
+                                        </div>	&lt;!&ndash;item_wrapper&ndash;&gt;
+                                        <div class="item_content">L’accès de tous à l’énergie est essentiel. Il constitue une prior....</div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item active feature_news_item">
+                                        <div class="item_wrapper">
+                                            <div class="item_img">
+                                                <img class="img-responsive" src="images/1.jpg" alt="Chania">
+                                            </div> &lt;!&ndash;item_img&ndash;&gt;
+                                            <div class="item_title_date">
+                                                <span>Energie</span>
+                                                <div class="news_item_title">
+                                                    <h2><a href="#">Priorités pour une énergie durable</a></h2>
+                                                </div>
+                                                <div class="item_meta"><a href="#">20 Juin- 2019,</a> par:<a href="#">Reve</a></div>
+                                            </div> &lt;!&ndash;item_title_date&ndash;&gt;
+                                        </div>	&lt;!&ndash;item_wrapper&ndash;&gt;
+                                        <div class="item_content">L’accès de tous à l’énergie est essentiel. Il constitue une prior....</div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide"><div class="item active feature_news_item">
+                                    <div class="item_wrapper">
+                                        <div class="item_img">
+                                        </div> &lt;!&ndash;item_img&ndash;&gt;
+                                        <div class="item_title_date">
+                                            <span>Energie</span>
+                                            <div class="news_item_title">
+                                                <h2><a href="#">Priorités pour une énergie durable</a></h2>
+                                            </div>
+                                            <div class="item_meta"><a href="#">20 Juin- 2019,</a> par:<a href="#">Reve</a></div>
+                                        </div> &lt;!&ndash;item_title_date&ndash;&gt;
+                                    </div>	&lt;!&ndash;item_wrapper&ndash;&gt;
+                                    <div class="item_content">L’accès de tous à l’énergie est essentiel. Il constitue une prior....</div>
+
+                                </div></div>
+                            </div>
+                            &lt;!&ndash; Add Pagination &ndash;&gt;
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>-->
+                    <!--Carousel Wrapper-->
+                    <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                        </ol>
+                        <!--/.Indicators-->
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="view">
+                                    <img class="img-responsive" src="images/ene.jpg" alt="Chania">
+                                    <div class="mask rgba-black-light"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <h5>L'Afrique face aux défis du développement durable</h5>
+                                    <span>RECHERCHE SCIENTIFIQUE</span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="view">
+                                    <img class="img-responsive" src="images/tc.jpg" alt="Chania">
+                                    <div class="mask rgba-black-light"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <h5>Les financements du FEM en phase avec les ODD</h5>
+                                    <p>FINANCE DURABLE</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="view">
+                                    <img class="img-responsive" src="images/fake.jpg" alt="Chania">
+                                    <div class="mask rgba-black-light"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <h5>Prosuma partage son expérience RSE pour l’atteinte des ODD</h5>
+                                    <p>RSE</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.Slides-->
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Retour</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Suivant</span>
+                        </a>
+                        <!--/.Controls-->
+                    </div>
+                    <!--/.Carousel Wrapper-->
+                </div><!--col-md-6-->
+
+                <div class="col-md-6">
+                    <div class="feature_news_static">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="item active">
+                                    <div class="item_wrapper">
+                                        <div class="item_img">
+                                            <img class="img-responsive" src="images/1.jpg" alt="Chania">
+                                        </div> <!--item_img-->
+                                        <div class="item_title_date">
+                                            <span>Energie</span>
+                                            <div class="news_item_title">
+                                                <h2><a href="#">Priorités pour une énergie durable</a></h2>
+                                            </div>
+                                            <div class="item_meta"><a href="#">20 Juin- 2019,</a> par:<a href="#">Reve</a></div>
+                                        </div> <!--item_title_date-->
+                                    </div>	<!--item_wrapper-->
+                                    <div class="item_content">L’accès de tous à l’énergie est essentiel. Il constitue une prior....</div>
+
+                                </div>
+                                    </div>
+
+                            <div class="col-md-6">
+                                <div class="item active">
+                                    <div class="item_wrapper">
+                                        <div class="item_img">
+                                            <img class="img-responsive" src="images/1.jpg" alt="Chania">
+                                        </div> <!--item_img-->
+                                        <div class="item_title_date">
+                                            <span>Energie</span>
+                                            <div class="news_item_title">
+                                                <h2><a href="#">Priorités pour une énergie durable</a></h2>
+                                            </div>
+                                            <div class="item_meta"><a href="#">20 Juin- 2019,</a> par:<a href="#">Reve</a></div>
+                                        </div> <!--item_title_date-->
+                                    </div>	<!--item_wrapper-->
+                                    <div class="item_content">L’accès de tous à l’énergie est essentiel. Il constitue une prior....</div>
+
+                                </div>
+                            </div>
+                        </div><!--row-->
+                    </div><!--feature_news_static-->
+                </div><!--col-md-6-->
+            </div><!--row-->
+        </div><!--container-->
+    </section><!--feature_news_section-->
+
+    <!-- Feature Category Section & sidebar -->
+    <section id="feature_category_section" class="feature_category_section section_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="category_layout">
+                        <div class="item_caregory red"><h2><a href="#">Actualité</a></h2></div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item feature_news_item">
+                                    <div class="item_wrapper">
+                                        <div class="item_img">
+                                            <img class="img-responsive" src="images/6.jpg" alt="Chania">
+                                        </div><!--item_img-->
+                                        <div class="item_title_date">
+                                            <span>Habitation & Urbanisation</span>
+                                            <div class="news_item_title">
+                                                <h2><a href="#">Pour une amélioration du transport urbain en Côte d’Ivoire.</a></h2>
+                                            </div><!--news_item_title-->
+                                            <div class="item_meta"><a href="#">29 Juin- 2019,</a> par:<a href="#">Reve</a></div>
+                                        </div><!--item_title_date-->
+                                    </div><!--item_wrapper-->
+                                    <div class="item_content">La santé économique de la Côte d’Ivoire reste dynamique, avec toutefois une problématique urgente à résoudre : celle de la mobilité à Abidjan pour transformer sa forte croissance urbaine en atout...
+                                    </div>
+
+                                </div><!--feature_news_item-->
+                            </div><!--col-md-7-->
+
+                            <div class="col-md-5">
+                                <div class="media_wrapper">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/8.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>Finance Durable</span>
+                                            <h3 class="media-heading"><a href="#">Partenariats public-privé pour une croissance verte, le cas d’Eranove en Afrique de l’Ouest
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/9.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>Energies</span>
+                                            <h3 class="media-heading"><a href="#">Audit et financement de l'efficacement énergétique
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/10.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>Agriculture & S. alimentaire</span>
+                                            <h3 class="media-heading"><a href="#">SCB: Démarche RSE dans le secteur agro-industriel ivoirien
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/11.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>Habitats & Urbanisation</span>
+                                            <h3 class="media-heading"><a href="#">Éolis: Transport durable et sécurité alimentaire
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+
+                                </div><!--media_wrapper-->
+
+                            </div>
+                        </div><!--row-->
+                    </div><!--category_layout-->
+
+                    <div class="category_layout">
+                        <div class="item_caregory blue"><h2><a href="#">Rencontre</a></h2></div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="item active feature_news_item">
+                                    <div class="item_wrapper">
+                                        <div class="item_img">
+                                            <img class="img-responsive" src="images/12.jpg" alt="Chania">
+                                        </div><!--item_img-->
+                                        <div class="item_title_date">
+                                            <span class="blue">Energie</span>
+                                            <div class="news_item_title">
+                                                <h2><a href="#">Les PME ivoiriennes face aux défis de l’efficacité énergétique.</a></h2>
+                                            </div><!--news_item_title-->
+                                            <div class="item_meta"><a href="#">01 Juillet- 2019,</a> par:<a href="#">Reve</a></div>
+                                        </div><!--item_title_date-->
+                                    </div><!--item_wrapper-->
+                                    <div class="item_content">Les PME ont besoin d’énergie pour leurs fonctionnements. La disponibilité et le prix de l’électricité sont devenus, pour elles, des questions de compétitivité...
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-5">
+                                <div class="media_wrapper">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/7.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>RSE</span>
+                                            <h3 class="media-heading"><a href="#">La RSE et les enjeux du développement durable
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/8.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>Finance Durable</span>
+                                            <h3 class="media-heading"><a href="#">Partenariats public-privé pour une croissance verte, le cas d’Eranove en Afrique de l’Ouest
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/9.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>Energies</span>
+                                            <h3 class="media-heading"><a href="#">Audit et financement de l'efficacement énergétique
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#"><img class="media-object" src="images/10.jpg" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <span>Agriculture & S. alimentaire</span>
+                                            <h3 class="media-heading"><a href="#">SCB: Démarche RSE dans le secteur agro-industriel ivoirien
+                                            </a></h3>
+                                        </div><!--media-body-->
+                                    </div>
+
+                                </div><!--media_wrapper-->
+
+                            </div>
+                        </div><!--row-->
+                    </div>
+
+
+                    <!--<div id="more_news_item" class="more_news_item">
+                        <div class="more_news_heading"><h2><a href="#">More News</a></h2></div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="feature_news_item">
+                                    <div class="item">
+                                        <div class="item_wrapper">
+                                            <div class="item_img">
+                                                <img class="img-responsive" src="images/img-news.jpg" alt="Chania">
+                                            </div>&lt;!&ndash;item_img&ndash;&gt;
+                                            <div class="item_title_date">
+                                                <div class="news_item_title">
+                                                    <h3><a href="#">Track Roboto the Real Tracker.</a></h3>
+                                                </div>&lt;!&ndash;news_item_title&ndash;&gt;
+                                                <div class="item_meta"><a href="#">20Aug- 2015,</a> by:<a href="#">Jhonson</a></div>
+                                            </div>&lt;!&ndash;item_title_date&ndash;&gt;
+                                        </div>&lt;!&ndash;item_wrapper&ndash;&gt;
+                                        <div class="item_content">Sed ut perspiciatis unde omnis iste natus error sit
+                                        </div>&lt;!&ndash;item_content&ndash;&gt;
+
+                                    </div>&lt;!&ndash;item&ndash;&gt;
+                                </div>&lt;!&ndash;feature_news_item&ndash;&gt;
+                            </div>&lt;!&ndash;col-xs-4&ndash;&gt;
+
+                            <div class="col-md-4">
+                                <div class="feature_news_item">
+                                    <div class="item active">
+                                        <div class="item_wrapper">
+                                            <div class="item_img">
+                                                <img class="img-responsive" src="images/img-news1.jpg" alt="Chania">
+                                            </div>&lt;!&ndash;item_img&ndash;&gt;
+                                            <div class="item_title_date">
+                                                <div class="news_item_title">
+                                                    <h3><a href="#">Track Roboto the Real Tracker.</a></h3>
+                                                </div>&lt;!&ndash;news_item_title&ndash;&gt;
+                                                <div class="item_meta"><a href="#">20Aug- 2015,</a> by:<a href="#">Jhonson</a></div>
+                                            </div>&lt;!&ndash;item_title_date&ndash;&gt;
+                                        </div>&lt;!&ndash;item_wrapper&ndash;&gt;
+                                        <div class="item_content">Sed ut perspiciatis unde omnis iste natus error sit
+                                        </div>&lt;!&ndash;item_content&ndash;&gt;
+
+                                    </div>&lt;!&ndash;item&ndash;&gt;
+                                </div>&lt;!&ndash;feature_news_item&ndash;&gt;
+                            </div>&lt;!&ndash;col-xs-4&ndash;&gt;
+
+                            <div class="col-md-4">
+                                <div class="feature_news_item">
+                                    <div class="item active">
+                                        <div class="item_wrapper">
+                                            <div class="item_img">
+                                                <img class="img-responsive" src="images/img-news2.jpg" alt="Chania">
+                                            </div>&lt;!&ndash;item_img&ndash;&gt;
+                                            <div class="item_title_date">
+                                                <div class="news_item_title">
+                                                    <h3><a href="#">Track Roboto the Real Tracker.</a></h3>
+                                                </div>&lt;!&ndash;news_item_title&ndash;&gt;
+                                                <div class="item_meta"><a href="#">20Aug- 2015,</a> by:<a href="#">Jhonson</a></div>
+                                            </div>&lt;!&ndash;item_title_date&ndash;&gt;
+                                        </div>&lt;!&ndash;item_wrapper&ndash;&gt;
+                                        <div class="item_content">Sed ut perspiciatis unde omnis iste natus error sit
+                                        </div>&lt;!&ndash;item_content&ndash;&gt;
+
+                                    </div>&lt;!&ndash;item&ndash;&gt;
+                                </div>&lt;!&ndash;feature_news_item&ndash;&gt;
+                            </div>&lt;!&ndash;col-xs-4&ndash;&gt;
+                        </div>&lt;!&ndash;row&ndash;&gt;
+                    </div>-->
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="tab sitebar">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a  href="#1" data-toggle="tab">Derniers Articles</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="1">
+                                {{#each info.Article}}
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="/article/{{id}}"><img class="media-object" src="/images/{{imgs}}" alt="Generic placeholder image"></a>
+                                        </div><!--media-left-->
+                                        <div class="media-body">
+                                            <h4 class="media-heading"><a href="#"><script>short("{{titre}}");</script></a></h4>
+                                        </div><!--media-body-->
+                                    </div>
+                                {{/each}}
+
+                            </div><!--tab-pane-->
+                        </div><!--tab-content-->
+                    </div><!--tab-->
+
+                    <div class="ad">
+                        <img class="img-responsive" src="/images/pnud2.png" alt="img" />
+                        <img class="img-responsive" src="images/CIE.jpg" alt="img" />
+                        <img class="img-responsive" src="images/boad.jpg" alt="img" />
+                        <img class="img-responsive" src="images/bnetd.jpg" alt="img" />
+                    </div><!--ad-->
+
+
+                    <div class="most_comment">
+                        <div class="sidebar_title">
+                            <h2>Article Populaire de la semaine</h2>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="images/2.jpg" alt="Generic placeholder image"></a>
+                            </div><!--media-left-->
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">Audit et financement de l'efficacement énergétique</a></h3>
+                                <div class="comment_box">
+                                    <div class="comments_icon"> <i class="fa fa-comments" aria-hidden="true"></i></div>
+                                    <div class="comments"><a href="#">9 Commentaires</a></div>
+                                </div><!--comment_box-->
+                            </div><!--media-body-->
+                        </div><!--media-->
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="images/3.jpg" alt="Generic placeholder image"></a>
+                            </div><!--media-left-->
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">Partenariats public-privé pour une croissance verte, le cas d’Eran.</a></h3>
+                                <div class="comment_box">
+                                    <div class="comments_icon"> <i class="fa fa-comments" aria-hidden="true"></i></div>
+                                    <div class="comments"><a href="#">20 Commentaires</a></div>
+                                </div><!--comment_box-->
+                            </div><!--media-body-->
+                        </div><!--media-->
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="images/5.jpg" alt="Generic placeholder image"></a>
+                            </div><!--media-left-->
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">Soutra Fourneau: Innovation pour la cuisson au charbon de bois</a></h3>
+                                <div class="comment_box">
+                                    <div class="comments_icon"> <i class="fa fa-comments" aria-hidden="true"></i></div>
+                                    <div class="comments"><a href="#">23 Commentaires</a></div>
+                                </div><!--comment_box-->
+                            </div><!--media-body-->
+                        </div><!--media-->
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object" src="images/7.jpg" alt="Generic placeholder image"></a>
+                            </div><!--media-left-->
+                            <div class="media-body">
+                                <h3 class="media-heading"><a href="#">La RSE dans le secteur minier : l’expérience du Canada</a></h3>
+                                <div class="comment_box">
+                                    <div class="comments_icon"> <i class="fa fa-comments" aria-hidden="true"></i></div>
+                                    <div class="comments"><a href="#">4 Commentaires</a></div>
+                                </div><!--comment_box-->
+                            </div><!--media-body-->
+                        </div><!--media-->
+                    </div><!--most_comment-->
+                </div>
+            </div>
+    </section><!--feature_category_section-->
+
+    <!-- Feature Video Item -->
+    <section id="feature_video_item" class="feature_video_item section_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="feature_video_wrapper">
+                        <div class="feature_video_title"><h2>Reve.TV</h2></div>
+
+                        <div id="feature_video_slider" class="owl-carousel">
+                            <div class="item">
+                                <div class="video_thumb"><img   src="/images/d722f2a14a84b7ad8053262f61a6106b_XL.jpg" alt="Owl Image"></div>
+                                <div class="video_info">
+                                    <div class="video_item_title"><h3><a href="#">Le Premier ministre exprime l'ambition de l'Etat de porter le couvert forestier au-dessus de 20%</a></h3></div><!--video_item_title-->
+                                    <div class="item_meta"><a href="#">20 Juin- 2019</a></div><!--item_meta-->
+                                </div><!--video_info-->
+                            </div>
+                            <div class="item">
+                                <div class="video_thumb"><img   src="/images/73608782f50eb6af17bb69bdcd662692_XL.jpg" alt="Owl Image"></div>
+                                <div class="video_info">
+                                    <div class="video_item_title"><h3><a href="#">Le Premier ministre exprime l'ambition de l'Etat de porter le couvert forestier au-dessus de 20%</a></h3></div><!--video_item_title-->
+                                    <div class="item_meta"><a href="#">20 Juin- 2019</a></div><!--item_meta-->
+                                </div><!--video_info-->
+                            </div>
+                            <div class="item">
+                                <div class="video_thumb"><img   src="images/29766e2a37e979b18d18c428ff9c5aba_XL.jpg" alt="Owl Image"></div>
+                                <div class="video_info">
+                                    <div class="video_item_title"><h3><a href="#">Le Premier ministre exprime l'ambition de l'Etat de porter le couvert forestier au-dessus de 20%</a></h3></div><!--video_item_title-->
+                                    <div class="item_meta"><a href="#">20 Juin- 2019</a></div><!--item_meta-->
+                                </div><!--video_info-->
+                            </div>
+                            <div class="item">
+                                <div class="video_thumb"><img   src="/images/d722f2a14a84b7ad8053262f61a6106b_XL.jpg" alt="Owl Image"></div>
+                                <div class="video_info">
+                                    <div class="video_item_title"><h3><a href="#">Le Premier ministre exprime l'ambition de l'Etat de porter le couvert forestier au-dessus de 20%</a></h3></div><!--video_item_title-->
+                                    <div class="item_meta"><a href="#">20 Juin- 2019</a></div><!--item_meta-->
+                                </div><!--video_info-->
+                            </div>
+                            <div class="item">
+                                <div class="video_thumb"><img   src="/images/73608782f50eb6af17bb69bdcd662692_XL.jpg" alt="Owl Image"></div>
+                                <div class="video_info">
+                                    <div class="video_item_title"><h3><a href="#">Le Premier ministre exprime l'ambition de l'Etat de porter le couvert forestier au-dessus de 20%</a></h3></div><!--video_item_title-->
+                                    <div class="item_meta"><a href="#">20 Juin- 2019</a></div><!--item_meta-->
+                                </div><!--video_info-->
+                            </div>
+                            <div class="item">
+                                <div class="video_thumb"><img   src="images/29766e2a37e979b18d18c428ff9c5aba_XL.jpg" alt="Owl Image"></div>
+                                <div class="video_info">
+                                    <div class="video_item_title"><h3><a href="#">Le Premier ministre exprime l'ambition de l'Etat de porter le couvert forestier au-dessus de 20%</a></h3></div><!--video_item_title-->
+                                    <div class="item_meta"><a href="#">20 Juin- 2019</a></div><!--item_meta-->
+                                </div><!--video_info-->
+                            </div>
+                        </div><!--feature_video_slider-->
+
+
+                    </div><!--col-xs-12-->
+                </div><!--row-->
+            </div><!--feature_video_wrapper-->
+        </div><!--container-->
+    </section>
+
+    <!-- Footer Section -->
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        var init = 0
+        $('#modalDiscount').on('click',function () {
+            if(init===0){
+                $('.fixeddd').fadeToggle(700);
+                $(this).parent().animate({left: "199px"});
+                init++;
+            }
+            else{
+                    $('.fixeddd').fadeToggle(1000);
+                $(this).parent().animate({left: "0px"});
+                init=0;
+            }
+
+        })
+        $("body").on('scroll',function () {
+            if($("body").scrollTop() >= 195){
+                $('.navbar.main-menu.navbar-inverse.navbar-static-top').addClass("fixed");
+            }
+            else{
+                $('.navbar.main-menu.navbar-inverse.navbar-static-top').removeClass("fixed");
+            }
+        })
+
+    })
+</script>

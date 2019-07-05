@@ -1,0 +1,131 @@
+<section id="container">
+    <!--header start-->
+    <header class="header fixed-top clearfix">
+        <!--logo start-->
+        <div class="brand">
+            <a href="/" class="logo">
+                REVE
+            </a>
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </div>
+        <!--logo end-->
+        <div class="top-nav clearfix">
+            <!--search & user info start-->
+            <div class="nav pull-right top-menu">
+                <a href="/admin/reve/logout" class="disconect">
+                    Deconnection
+                </a>
+            </div>
+            <!--search & user info end-->
+        </div>
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <!-- sidebar menu start-->
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li>
+                        <a class="active" href="/admin/reve">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Tableau de Bord</span>
+                        </a>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-book"></i>
+                            <span>Gestion Primaire</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/admin/reve/createTheme">Creation de Thème</a></li>
+                            <li><a href="/admin/reve/createODD">Creation de ODD</a></li>
+                            <li><a href="/admin/reve/createArticle">Creation d'Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span>Gestion Secondaire</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/admin/reve/createGalery">Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>Bibliothèque</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="#">Aucune Idéé</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="#">
+                            <i class="fa fa-envelope"></i>
+                            <span>Mail </span>
+                        </a>
+                    </li>
+                </ul>            </div>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <form action="/admin/reve/theme" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nom du thème</label>
+                                <input type="text" name="theme" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleimage">Profil</label>
+                                <select name="profil" class="form-control" id="exampleimage">
+                                    <option value="">choisir une image</option>
+                                    {{#each info.Images}}
+                                        <option value="{{nom_image}}">{{nom_image}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-dark">Enregistrer</button>
+                        </form>
+                    </div>
+                    <div class="col-md-9 col-sm-6">
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                    {{#each info.themes}}
+                                    <div class="col-md-6">
+                                        <div class="allT" id={{id}}>
+                                            <img src="/images/{{profil}}" alt="">
+                                            <span class="contain">{{name}}</span>
+                                            <span class="del"><i class="fa fa-close"></i></span>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- footer -->
+        <div class="footer">
+            <div class="wthree-copyright">
+                <p>© 2019 Reve</p>
+            </div>
+        </div>
+        <!-- / footer -->
+    </section>
+    <!--main content end-->
+</section>
